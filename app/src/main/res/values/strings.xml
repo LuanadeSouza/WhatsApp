@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">WhatsApp</string>
+    <string name="title_activity_main">Main</string>
+
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_phone">Telefone</string>
+
+    <string name="button_login">Conecte-se</string>
+    <string name="button_signup">Inscrever-se</string>
+
+    <string name="text_signup"><u>Sem conta? Vá em frente Inscreva-se</u></string>
+    <string name="text_login"><u>Já tem uma conta? Vá para o Login</u></string>
+
+    <string name="action_logout">Sair</string>
+    <string name="action_profile">Perfil</string>
+    <string name="action_settings">Configurações</string>
+</resources>
