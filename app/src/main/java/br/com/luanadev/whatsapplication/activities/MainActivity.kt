@@ -16,14 +16,14 @@ import kotlinx.android.synthetic.main.fragment_main.view.*
 
 class MainActivity : AppCompatActivity() {
     private val firebaseAuth = FirebaseAuth.getInstance()
-    private var mSectiopnPagerAdapter: SectiopnPagerAdapter? = null
+    private var mSectiopnPagerAdapter: SectionsPagerAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         setSupportActionBar(toobar)
-        mSectiopnPagerAdapter = SectiopnPagerAdapter(supportFragmentManager)
+        mSectiopnPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
 
         container.adapter = mSectiopnPagerAdapter
 
@@ -40,9 +40,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.action_profile -> onProfile()
             R.id.action_logout -> onLogout()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun onProfile() {
+        startActivity(ProfileActivity.newIntent(this))
     }
 
     private fun onLogout() {
@@ -51,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    class SectiopnPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+    class SectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         override fun getItem(position: Int): Fragment {
             return PlaceholderFragment.newintent(position + 1)
         }

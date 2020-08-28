@@ -9,6 +9,8 @@
 
     <string name="button_login">Conecte-se</string>
     <string name="button_signup">Inscrever-se</string>
+    <string name="button_apply">Aplique</string>
+    <string name="button_delete">Excluir</string>
 
     <string name="text_signup"><u>Sem conta? Vá em frente Inscreva-se</u></string>
     <string name="text_login"><u>Já tem uma conta? Vá para o Login</u></string>
